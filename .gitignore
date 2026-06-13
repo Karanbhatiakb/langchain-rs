@@ -1,0 +1,13 @@
+# Rust build artifacts
+target/
+
+# Dev environment / OS files
+.DS_Store
+Thumbs.db
+*.bak
+*.bk
+*.log
+*.tmp
+.env
+.env.*
+!.env.example

@@ -1,0 +1,54 @@
+[package]
+name = "langchain-memory"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[features]
+default = ["all"]
+buffer = []
+window = []
+summary = []
+entity = []
+vectorstore = []
+zep = []
+postgres = ["dep:sqlx"]
+redis = ["dep:redis"]
+mongodb = ["dep:mongodb"]
+cassandra = []
+dynamodb = []
+sqlite = ["dep:sqlx"]
+motorhead = []
+memgraph = []
+postgres-history = []
+redis-history = []
+mongodb-history = []
+dynamodb-history = []
+elasticsearch-history = []
+firestore-history = []
+cosmosdb-history = []
+sql-history = []
+neo4j-history = []
+astra-history = []
+all = ["buffer", "window", "summary", "entity", "vectorstore", "zep", "postgres", "redis", "mongodb", "cassandra", "dynamodb", "sqlite", "motorhead", "memgraph"]
+
+[dependencies]
+langchain-core = { path = "../langchain-core" }
+langchain-llms = { path = "../langchain-llms" }
+langchain-embeddings = { path = "../langchain-embeddings" }
+langchain-vectorstores = { path = "../langchain-vectorstores" }
+tokio.workspace = true
+async-trait.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+thiserror.workspace = true
+futures.workspace = true
+tracing.workspace = true
+parking_lot.workspace = true
+dashmap.workspace = true
+chrono.workspace = true
+uuid.workspace = true
+reqwest.workspace = true
+sqlx = { workspace = true, optional = true }
+redis = { workspace = true, optional = true }
+mongodb = { workspace = true, optional = true }
